@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-// import './index.css'
+import './index.css'
 
 import {
   createBrowserRouter,
@@ -9,10 +9,7 @@ import {
 } from "react-router-dom";
 import Home from './pages/home';
 import About from './pages/about';
-// window.addEventListener('unmount', function () {
-//   // 执行卸载相关操作
-//   console.log('child unmount')
-// })
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,4 +21,5 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('child') as HTMLElement).render( <RouterProvider router={router} />)
+ReactDOM.createRoot(document.getElementById('webpack-child')).render( <RouterProvider router={router} />)
+
